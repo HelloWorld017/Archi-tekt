@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="<%= global.config.lang %>">
+	<head>
+		<meta charset="UTF-8">
+		<title><%= global.translation["error-title"] %></title>
+
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+
+		<link rel="stylesheet" type="text/css" href="/css/materialize.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+
+		<style>
+			html, body{
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				background: <%= global.config["background-main-color"] %>;
+			}
+
+			nav{
+				background: #FF3050;
+				color: #FFFFFF;
+			}
+
+			.nav-wrapper{
+				max-width: 942px;
+				margin: 0 auto;
+			}
+
+			.error-icon{
+				margin-right: 10px;
+			}
+
+			.errorno, .masthead{
+				text-align: center;
+			}
+
+			.errorno{
+				font-size: 10em;
+				color: <%= global.config["main-color"] %>;
+			}
+
+			.masthead{
+				font-weight: 200;
+				color: <%= global.config["text-main-color"] %>;
+			}
+
+			.description{
+				width: 100%;
+				text-align: center;
+				font-weight: 400;
+				color: <%= global.config["text-main-color"] %>;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<div class="nav-wrapper">
+				<span class="brand-logo"><span class="fa fa-times-circle error-icon"></span><%= global.translation["error-title"] %></span>
+			</div>
+		</nav>
+
+		<section>
+			<div class="container">
+				<h1 class="errorno">
+					<%= errorno %>
+				</h1>
+
+				<h3 class="masthead">
+					<%= global.translation[errorno + "-masthead"] || 'Error!' %>
+				</h3>
+
+				<div style="max-width: 500px; margin: 0 auto;">
+					<p  class="description">
+						<%= global.translation[errorno + "-description"] || 'You are lucky enough to find unknown bug! :D' %>
+					</p>
+
+					<div style="width: 100%">
+						<button class="btn" style="width: calc(60% - 3px)" onclick="history.go(-1)">
+							<span class="fa fa-chevron-left"></span>
+							<%= global.translation["error-previous"] %>
+						</button>
+
+						<a class="btn" style="width: calc(40% - 3px)" href="/">
+							<span class="fa fa-home"></span>
+							<%= global.translation["error-main"] %>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

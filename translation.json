@@ -1,0 +1,11 @@
+{
+	"error-main": "Main",
+	"error-previous": "Previous Page",
+	"error-title": "Aw, Snap!",
+	"404-masthead": "Page not found",
+	"404-description": "What you are finding is not here.",
+	"403-masthead": "Forbidden",
+	"403-description": "Oops! You are trying to get our secrets!",
+	"500-masthead": "Internal Server Error",
+	"500-description": "Whoa! There was a bug."
+}

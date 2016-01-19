@@ -1,0 +1,11 @@
+{
+	"title": "Kawai sugiru nenwchan",
+	"main-color": "#00C0A0",
+	"background-main-color": "#FFFFFF",
+	"text-main-color": "#303030",
+	"navigation-no-index": false,
+	"site-root": "site",
+	"plugin-style-root": "plugin-styles",
+	"plugin-root": "plugins",
+	"index-name": "index"
+}
