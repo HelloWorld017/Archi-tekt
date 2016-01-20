@@ -145,13 +145,26 @@ router.get('*', function(req, res, next) {
 
 		async.forEachOf(json.tiles, function(v, index, cb){
 			//console.log('async2' + v + ',' + index);
-			switch(v.parse){
-				case 'html': cb(); return;
-				case 'markdown': json.tiles[index].desc = marked(v.desc); cb(); return;
-			}
 
-			json.tiles[index].desc = escape(v.desc.replace(/\r\n|\r|\n/g, '<br>'));
-			cb();
+			if(v["desc-target"]){
+				fs.readFile(path.join(folderPath, v["desc-target"]), 'utf8', function(err, desc){
+					switch(v.parse){
+						case 'html': cb(); return;
+						case 'markdown': json.tiles[index].desc = marked(desc); cb(); return;
+					}
+
+					json.tiles[index].desc = escape(desc).replace(/\r\n|\r|\n/g, '<br>');
+					cb();
+				});
+			}else{
+				switch(v.parse){
+					case 'html': cb(); return;
+					case 'markdown': json.tiles[index].desc = marked(v.desc); cb(); return;
+				}
+
+				json.tiles[index].desc = escape(v.desc).replace(/\r\n|\r|\n/g, '<br>');
+				cb();
+			}
 		}, function(){
 			//console.log('async2 finished');
 			info = json;

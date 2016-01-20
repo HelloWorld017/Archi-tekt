@@ -2,17 +2,17 @@
 	<div class="card" style="background: <%= tile['background-color'] %>; max-width: <%= tile.width %>; height: <%= tile.height %>">
 		<div class="card-content" style="color: <%= tile['text-color'] %>">
 			<span class="card-title">
-				<%= tile.name %>
+				<%- tile.name %>
 			</span>
 
 			<p>
-				<%= tile.desc %>
+				<%- tile.desc %>
 			</p>
 		</div>
 
 		<div class="card-action">
 			<a href="<%= tile.href %>" style="color: <%= tile.color %>">
-				<%= tile["href-text"] %>
+				<%- tile["href-text"] %>
 			</a>
 		</div>
 	</div>

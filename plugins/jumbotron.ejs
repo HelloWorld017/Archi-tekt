@@ -1,11 +1,11 @@
 <div class="jumbotron" style="background: <%= tile['background-color'] %>">
 	<div class="jumbotron-wrapper" style="color: <%= tile['text-color'] %>">
 		<h2>
-			<a href="<%= tile.href %>" style="color: <%= tile.color %>"><%= tile.name %></a>
+			<a href="<%= tile.href %>" style="color: <%= tile.color %>"><%- tile.name %></a>
 		</h2>
 
 		<p class="desc">
-			<%= tile.desc %>
+			<%- tile.desc %>
 		</p>
 	</div>
 </div>
