@@ -10,7 +10,7 @@
 	</div>
 
 	<div class="card-action">
-		<a href="<%= tile.href %>" style="color: <%= tile.color %>">
+		<a href="<%= tile.href %>" style="color: <%= tile.color %>" <%= (tile.ntab) ? 'target="_blank"' : '' %>>
 			<%- tile["href-text"] %>
 		</a>
 	</div>
