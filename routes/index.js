@@ -148,8 +148,10 @@ router.get('*', function(req, res, next) {
 
 			if(v["desc-target"]){
 				fs.readFile(path.join(folderPath, v["desc-target"]), 'utf8', function(err, desc){
+					if(err) return;
+					
 					switch(v.parse){
-						case 'html': cb(); return;
+						case 'html': json.tiles[index].desc = desc; cb(); return;
 						case 'markdown': json.tiles[index].desc = marked(desc); cb(); return;
 					}
 
