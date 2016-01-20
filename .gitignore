@@ -33,6 +33,7 @@ npm-debug.log
 site/*
 plugins/*
 plugin-styles/*
+public/**/*
 server.json
 translation.json
 
