@@ -38,6 +38,7 @@ translation.json
 
 # Built-in files
 !plugin-styles/jumbotron.ejs
+!plugin-styles/card.ejs
 !plugins/card.ejs
 !plugins/jumbotron.ejs
 !plugins/small-card.ejs

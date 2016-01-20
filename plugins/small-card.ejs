@@ -1,19 +1,17 @@
-<div class="card-wrapper" style="max-width: 992px; margin: 0 auto;">
-	<div class="card" style="background: <%= tile['background-color'] %>; max-width: <%= tile.width %>; height: <%= tile.height %>">
-		<div class="card-content" style="color: <%= tile['text-color'] %>">
-			<span class="card-title">
-				<%- tile.name %>
-			</span>
+<div class="card scard" style="background: <%= tile['background-color'] %>; width: <%= tile.width %>; height: <%= tile.height %>">
+	<div class="card-content" style="color: <%= tile['text-color'] %>">
+		<span class="card-title">
+			<%- tile.name %>
+		</span>
 
-			<p>
-				<%- tile.desc %>
-			</p>
-		</div>
+		<p>
+			<%- tile.desc %>
+		</p>
+	</div>
 
-		<div class="card-action">
-			<a href="<%= tile.href %>" style="color: <%= tile.color %>">
-				<%- tile["href-text"] %>
-			</a>
-		</div>
+	<div class="card-action">
+		<a href="<%= tile.href %>" style="color: <%= tile.color %>">
+			<%- tile["href-text"] %>
+		</a>
 	</div>
 </div>
