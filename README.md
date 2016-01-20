@@ -51,4 +51,5 @@ in your info.json.
 
 Add ejs files in plugin-styles.
 It will be loaded once.
+
 __Warning: The style will be loaded REGARDLESS OF PLUGINS WILL BE USED.__
