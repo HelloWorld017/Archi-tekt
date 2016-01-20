@@ -1,7 +1,9 @@
 <style>
 	.jumbotron, .small-jumbotron{
-		width: 100%;
+		width: 100vw;
 		text-align: left;
+		position: relative;
+		left: calc(496px - 50vw);
 	}
 
 	.jumbotron-wrapper, .small-jumbotron-wrapper{
@@ -14,5 +16,17 @@
 
 	.jumbotron{
 		height: 100vh;
+	}
+
+	@media screen and (max-width: 992px){
+		.jumbotron, .small-jumbotron{
+			left: -50px;
+		}
+	}
+
+	@media screen and (max-width: 440px){
+		.jumbotron, .small-jumbotron{
+			left: 0px;
+		}
 	}
 </style>

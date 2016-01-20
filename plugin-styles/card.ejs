@@ -1,4 +1,8 @@
 <style>
+	body, html{
+		overflow-x: hidden;
+	}
+
 	section{
 		max-width: 992px;
 		margin: 0 auto;
@@ -12,9 +16,15 @@
 		 margin: 10px;
 	}
 
-	@media screen and (max-width < 992px){
+	@media screen and (max-width: 992px){
 		section{
 			padding: 0 50px;
+		}
+	}
+
+	@media screen and (max-width: 440px){
+		section{
+			padding: 0px;
 		}
 	}
 </style>
