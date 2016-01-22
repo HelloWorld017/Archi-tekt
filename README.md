@@ -8,6 +8,16 @@ $ git clone https://github.com/HelloWorld017/Archi-tekt.git
 $ npm install
 ```
 You can run with
+```
+$ npm start
+```
+
+### Edit server.json
+Change title, colors.
+
+### Edit translation.json (if needed).
+It contains error messages.
+
 ### Make a navigation object.
 1. Add new folder in site folder. (index folder will be the default directory.)
 2. Add info.json.
