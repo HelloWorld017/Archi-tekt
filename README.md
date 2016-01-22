@@ -2,6 +2,12 @@
 Build a website with json!
 
 ## How to build?
+### Download the project.
+```
+$ git clone https://github.com/HelloWorld017/Archi-tekt.git
+$ npm install
+```
+You can run with
 ### Make a navigation object.
 1. Add new folder in site folder. (index folder will be the default directory.)
 2. Add info.json.
